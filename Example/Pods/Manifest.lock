@@ -1,0 +1,16 @@
+PODS:
+  - SwiftyState (0.1.0)
+
+DEPENDENCIES:
+  - SwiftyState (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftyState:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftyState: d6f9afbf2eb805eac0da1a7c06a9d12ab8f91cf8
+
+PODFILE CHECKSUM: 30a534434b14506aa1e41142e83befacd0682dd5
+
+COCOAPODS: 1.7.3

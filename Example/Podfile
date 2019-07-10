@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SwiftyState_Example' do
+  pod 'SwiftyState', :path => '../'
+
+  target 'SwiftyState_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

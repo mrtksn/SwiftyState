@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SwiftyState_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I1F-Ub-yyZ" userLabel="SwitchDisplayView">
+                                <rect key="frame" x="8" y="8" width="359" height="305"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t57-Vi-Rnk" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="20" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="oD3-iq-szt"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Im-jm-JhN" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="59" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="pfN-aC-iyH"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9JU-Xp-ZOm" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="98" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="foh-k7-st0"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eUn-P8-bkH" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="254" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="JtH-Us-LuI"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dpn-wC-SYB" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="71" y="254" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="PTb-oz-gqF"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yET-IQ-jR5" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="126" y="254" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="mNx-DW-G2K"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vDp-9H-s91" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="181" y="254" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="BIW-96-qfy"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uAb-al-fyv" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="236" y="254" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="fiX-zY-3zk"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lr8-pN-v0T" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="291" y="215" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="3Gq-Lf-f58"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Egl-m5-dQU" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="291" y="176" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="1pK-Nb-Wzl"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o1v-rW-qsC" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="291" y="137" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="PNn-kE-ZNu"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HsJ-o7-iGu" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="291" y="98" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="M7q-iF-mCS"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JTk-hH-DSC" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="291" y="59" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="pEE-wy-yye"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aen-e5-HxY" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="291" y="20" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="gbc-Ic-0ST"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VQq-Bn-nL8" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="236" y="215" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="R9a-Kg-iNn"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ynk-2A-NSq" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="236" y="176" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="3hZ-Ru-YgQ"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UGP-cK-eJg" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="236" y="137" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="QUX-IV-9Tj"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UXu-V9-i95" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="236" y="98" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="10Z-n8-KHJ"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZIl-0h-iLw" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="236" y="59" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="FZJ-Ru-Awe"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e2q-Oj-pqQ" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="236" y="20" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="iur-zB-l1D"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sxb-kC-COD" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="181" y="215" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="ZkU-G7-VtU"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ISr-gg-PW2" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="181" y="176" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="f3G-te-4La"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q3M-BC-IBY" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="181" y="137" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="hse-Yk-ALf"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bmx-K6-BkW" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="181" y="98" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="h2f-ZE-WwN"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ej3-qw-jn5" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="181" y="59" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Jgo-9Z-CdA"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6Uc-EM-Wuz" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="181" y="20" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Gwc-aS-KfJ"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D29-gl-bLr" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="126" y="215" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="kK7-pt-NIT"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RUQ-64-D7d" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="126" y="176" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Yt0-IT-GtG"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="728-6N-4Jt" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="126" y="137" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="v6a-Lz-Sfr"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bgD-Pd-aGt" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="126" y="98" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="3CW-xJ-nSG"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UY4-D7-JjZ" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="126" y="59" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Ywp-L4-7ph"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Y7C-hC-MlU" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="126" y="20" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="USR-Z9-XBH"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ayM-a4-qEk" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="71" y="215" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Tdv-4o-hwQ"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="A3z-bA-cjj" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="71" y="176" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="A4F-H2-AT1"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P2o-75-unT" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="71" y="137" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="ms3-bC-NAS"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pfN-hP-Upw" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="71" y="98" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Guk-LC-FN1"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q1z-0F-Q2F" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="71" y="59" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Pgs-bJ-Nux"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lw7-ab-veN" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="215" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="9RH-xH-66C"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aBb-TI-3gA" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="176" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="8VC-Re-1t6"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sPP-nd-RDR" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="137" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="SFg-6W-Cjq"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rXZ-MK-HF8" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="71" y="20" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="is9-X2-OXZ"/>
+                                        </connections>
+                                    </switch>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ukG-ze-yTY" customClass="AutoSwitch" customModule="SwiftyState_Example" customModuleProvider="target">
+                                        <rect key="frame" x="291" y="254" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="flipSwitch:" destination="vXZ-lx-hvc" eventType="valueChanged" id="TbJ-0c-JKw"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="359" id="1kg-vg-qTj"/>
+                                    <constraint firstAttribute="height" constant="305" id="k55-Vg-roK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake to open the debugger UI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cHU-cT-KJn">
+                                <rect key="frame" x="68.5" y="626.5" width="238.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JCs-pO-5Iz" userLabel="otherControlsView">
+                                <rect key="frame" x="16" y="457" width="343" height="80"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rb8-cZ-jFo">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="80"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8I-bI-PZh">
+                                                <rect key="frame" x="105" y="0.0" width="133" height="40"/>
+                                                <state key="normal" title="Ban these switches"/>
+                                                <connections>
+                                                    <action selector="ban:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Br0-Zp-LxW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4h-fs-jzl">
+                                                <rect key="frame" x="134" y="40" width="75" height="40"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                                <state key="normal" title="cancel ban"/>
+                                                <connections>
+                                                    <action selector="liftBan:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9Uw-hY-6MQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Rb8-cZ-jFo" secondAttribute="bottom" id="5dG-uk-uI2"/>
+                                    <constraint firstAttribute="height" constant="80" id="FbE-YU-Nkm"/>
+                                    <constraint firstItem="Rb8-cZ-jFo" firstAttribute="top" secondItem="JCs-pO-5Iz" secondAttribute="top" id="OHb-jo-8HQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rb8-cZ-jFo" secondAttribute="trailing" id="S0M-vC-mj6"/>
+                                    <constraint firstItem="Rb8-cZ-jFo" firstAttribute="leading" secondItem="JCs-pO-5Iz" secondAttribute="leading" id="d9Z-rb-LJ6"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJX-me-5CE" userLabel="numControlView">
+                                <rect key="frame" x="16" y="321" width="343" height="128"/>
+                                <subviews>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="AnL-4a-a2f">
+                                        <rect key="frame" x="124.5" y="68.5" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="changeMaxCount:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Uaq-uN-I2R"/>
+                                        </connections>
+                                    </stepper>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vq-ci-1yY">
+                                        <rect key="frame" x="153.5" y="1.5" width="36.5" height="67"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="56"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="maximum switches turned on" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sb-tj-taL">
+                                        <rect key="frame" x="89.5" y="105.5" width="164" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="1Sb-tj-taL" firstAttribute="top" secondItem="AnL-4a-a2f" secondAttribute="bottom" constant="8" id="4KV-24-rlR"/>
+                                    <constraint firstItem="9Vq-ci-1yY" firstAttribute="centerX" secondItem="cJX-me-5CE" secondAttribute="centerX" id="KBw-08-8Fr"/>
+                                    <constraint firstItem="1Sb-tj-taL" firstAttribute="centerX" secondItem="cJX-me-5CE" secondAttribute="centerX" id="T7b-rT-Q9u"/>
+                                    <constraint firstItem="AnL-4a-a2f" firstAttribute="centerX" secondItem="cJX-me-5CE" secondAttribute="centerX" id="VNf-Ke-tMy"/>
+                                    <constraint firstAttribute="height" constant="128" id="cxr-o4-qoo"/>
+                                    <constraint firstItem="AnL-4a-a2f" firstAttribute="top" secondItem="9Vq-ci-1yY" secondAttribute="bottom" id="dZ6-nI-zef"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Sb-tj-taL" secondAttribute="bottom" constant="8" id="k8P-BN-ZjU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cJX-me-5CE" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="4AT-eA-wJr"/>
+                            <constraint firstItem="JCs-pO-5Iz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Cbe-QQ-tiV"/>
+                            <constraint firstItem="I1F-Ub-yyZ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="MMG-Nz-tl4"/>
+                            <constraint firstItem="cJX-me-5CE" firstAttribute="top" secondItem="I1F-Ub-yyZ" secondAttribute="bottom" constant="8" id="MPR-IG-V8r"/>
+                            <constraint firstItem="JCs-pO-5Iz" firstAttribute="top" secondItem="cJX-me-5CE" secondAttribute="bottom" constant="8" id="Mt5-Fc-rmg"/>
+                            <constraint firstItem="JCs-pO-5Iz" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="N0K-Xt-nA4"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="cHU-cT-KJn" secondAttribute="bottom" constant="20" id="fyp-Cm-Zag"/>
+                            <constraint firstItem="I1F-Ub-yyZ" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="8" id="har-uy-Mum"/>
+                            <constraint firstItem="cHU-cT-KJn" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="scB-qV-K2e"/>
+                            <constraint firstItem="cJX-me-5CE" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="zjw-Jt-my7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="maxStepper" destination="AnL-4a-a2f" id="ASM-kE-u8W"/>
+                        <outlet property="maxSwitchCountLabel" destination="9Vq-ci-1yY" id="dBF-3J-pyH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="43.628185907046479"/>
+        </scene>
+    </scenes>
+</document>
