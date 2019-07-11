@@ -3,7 +3,7 @@
 
 SwiftyState is a **State Engine** featuring a powerful **on-device debugger with a graphical user interface**. You can also do time travel in your app. Inspired by the Redux JS Library but not too much.
 
-This is the Demo App. The UIKit elements automatically update as the state changes. The interface at the bottom is the on-device debugger where the developer can view and undo state changes.
+*Here is a video preview of the Demo App. The UIKit elements automatically update as the state changes. The interface at the bottom is the on-device debugger where the developer can view and undo state changes.*
 [![SwiftyState Demo App](http://img.youtube.com/vi/TwmqQTe3K58/0.jpg)](http://www.youtube.com/watch?v=TwmqQTe3K58)
 
 https://imgur.com/a/X9ENqwE
