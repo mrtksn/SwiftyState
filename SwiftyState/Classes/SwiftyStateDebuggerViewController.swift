@@ -79,7 +79,7 @@ public enum SwiftyDebuggerSize{
 public enum SwiftyDebuggerAction : SwiftyAction{
  
     
-    public func reducer(state: SwiftyStateStoreProtocol) -> SwiftyStateStoreProtocol {
+    public func reducer(state: SwiftyStateStore) -> SwiftyStateStore {
         var finalState = state
         switch self {
         case .replaceState(let newState):
@@ -90,7 +90,7 @@ public enum SwiftyDebuggerAction : SwiftyAction{
         return finalState
     }
     
-    case replaceState(_ state : SwiftyStateStoreProtocol)
+    case replaceState(_ state : SwiftyStateStore)
 }
 
 /// UIViewController of the debugger UI
@@ -287,7 +287,7 @@ public class SwiftyStateDebuggerViewController: UIViewController {
     ///
     /// - Parameter state: the state object that will be applied
     /// - Parameter addToHistory: Should the state be added to the history or only applied
-    func applyState(_ state : SwiftyStateStoreProtocol, addToHistory : Bool = false){
+    func applyState(_ state : SwiftyStateStore, addToHistory : Bool = false){
         /// Make sure that we only apply valid states
         if !SwiftyState().validateState(state) {
             return

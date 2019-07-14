@@ -7,9 +7,13 @@
 
 import Foundation
 
+/// Conform to this to have equatable store
+protocol SwiftyStateStoreProtocol : SwiftyStateStore, Equatable{
+    
+}
 
-/// The object that holds the state
-public protocol SwiftyStateStoreProtocol :  Codable {
+/// The object that holds the state, not equatable
+public protocol SwiftyStateStore :  Codable {
     /// A JSON String representation of the state
     ///
     /// - Returns: JSON as a String
@@ -22,11 +26,11 @@ public protocol SwiftyStateStoreProtocol :  Codable {
     ///
     /// - Parameter json: JSON String
     /// - Returns: Returns an object representing the state
-    func fromJSON(_ json: String)->SwiftyStateStoreProtocol?
+    func fromJSON(_ json: String)->SwiftyStateStore?
 }
 
 // MARK: - The object that contains the state data. Inherit from this
-public extension SwiftyStateStoreProtocol{
+public extension SwiftyStateStore{
     
     func toData()->Data{
         let encoder = JSONEncoder()
@@ -45,7 +49,7 @@ public extension SwiftyStateStoreProtocol{
     }
     
     
-    func fromJSON(_ json: String)->SwiftyStateStoreProtocol?{
+    func fromJSON(_ json: String)->SwiftyStateStore?{
         let decoder = JSONDecoder()
         var stateObject : Self?
         do{
@@ -61,16 +65,16 @@ public extension SwiftyStateStoreProtocol{
 
 /// State Validiator. Create a function that returns true if the state is valid, false if there is a problem and the state is not valid.
 public protocol SwiftyStateValidiator {
-    func validiator(_ state : SwiftyStateStoreProtocol)->Bool
+    func validiator(_ state : SwiftyStateStore)->Bool
 }
 
 /// State and meta data. Used as a history point
 public struct SwiftyStateStoreHistory {
     let date : Date
     let action: String
-    let state : SwiftyStateStoreProtocol
+    let state : SwiftyStateStore
     let valid: Bool
-    init(action: String, state: SwiftyStateStoreProtocol, valid: Bool = true) {
+    init(action: String, state: SwiftyStateStore, valid: Bool = true) {
         self.date = Date()
         self.action = action
         self.state = state
@@ -116,7 +120,7 @@ extension SwiftyActionDefaultProtocol {
 
 /// An empty action that can be used to access AvailableSwiftyActions via .available
 public enum SwiftyActionDefault : SwiftyActionDefaultProtocol {
-    public func reducer(state: SwiftyStateStoreProtocol) -> SwiftyStateStoreProtocol {
+    public func reducer(state: SwiftyStateStore) -> SwiftyStateStore {
         return state
     }
 }
@@ -124,8 +128,8 @@ public enum SwiftyActionDefault : SwiftyActionDefaultProtocol {
 /// State Actions are actions that modify the state when called
 public protocol SwiftyAction {
     // associatedtype action
-    func execute(_ currState : SwiftyStateStoreProtocol)->(state: SwiftyStateStoreProtocol, oldState: SwiftyStateStoreProtocol)
-    func reducer(state : SwiftyStateStoreProtocol)->SwiftyStateStoreProtocol
+    func execute(_ currState : SwiftyStateStore)->(state: SwiftyStateStore, oldState: SwiftyStateStore)
+    func reducer(state : SwiftyStateStore)->SwiftyStateStore
 }
 
 // MARK: - the execute function reduces boilerplate code by taking the arguments and calling the reducer. The user must create a reducer
@@ -134,7 +138,7 @@ extension SwiftyAction {
     ///
     /// - Parameter currState: The current state
     /// - Returns: the modified state
-    public func execute(_ currState : SwiftyStateStoreProtocol)->(state: SwiftyStateStoreProtocol, oldState: SwiftyStateStoreProtocol){
+    public func execute(_ currState : SwiftyStateStore)->(state: SwiftyStateStore, oldState: SwiftyStateStore){
         let state = self.reducer(state: currState)
         return (state: state, oldState : currState)
     }

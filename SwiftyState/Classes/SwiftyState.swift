@@ -20,14 +20,14 @@ public class SwiftyState {
         
     }
     
-    public func setStore<T: SwiftyStateStoreProtocol>(_ store: T){
+    public func setStore<T: SwiftyStateStore>(_ store: T){
         self.machineState.state = store
     }
     
     /// Returns a copy of the state
     ///
     /// - Returns: the state object
-    public func getRawState()->SwiftyStateStoreProtocol{
+    public func getRawState()->SwiftyStateStore{
         let state = self.machineState.state
         return state! // .copy() consumes a lot of resources
     }
@@ -61,7 +61,7 @@ public class SwiftyState {
     ///
     /// - Parameter state: the state that will be validated
     /// - Returns: true if the state is valid, false if the state is not valid. If no state validator is defined it will return true.
-    public func validateState(_ state : SwiftyStateStoreProtocol)->Bool{
+    public func validateState(_ state : SwiftyStateStore)->Bool{
         guard let stateValidiator = self.machineState.stateValidiator else {
             return true
         }
@@ -80,7 +80,7 @@ public class SwiftyState {
     ///   - action: an action
     ///   - state: the resulting state
     ///   - valid: was the state accepted as valid and applied or not
-    func addToHistory<T : SwiftyAction>(action: T, state: SwiftyStateStoreProtocol, valid : Bool = true){
+    func addToHistory<T : SwiftyAction>(action: T, state: SwiftyStateStore, valid : Bool = true){
         let actionDesciption = String(describing: action)
         let historyPoint = SwiftyStateStoreHistory(action: actionDesciption, state: state, valid: valid)
         self.machineState.stateHistory.append(historyPoint)
@@ -139,7 +139,7 @@ public class SwiftyState {
     ///
     /// - Parameter f: This is a closure that you should provide. The closure will be executed when the state changes. You should take care of the logic.
     /// - Returns: Subscription ID. Use this ID to unsubscribe when you no longer need to listen to updates or want to free up resources.
-    public func subscribe(f : @escaping (_ state: SwiftyStateStoreProtocol, _ oldState: SwiftyStateStoreProtocol?)->Void)->SwiftySubscription{
+    public func subscribe(f : @escaping (_ state: SwiftyStateStore, _ oldState: SwiftyStateStore?)->Void)->SwiftySubscription{
         self.machineState.counter += 1
         let id = "f\(self.machineState.counter)"
         
@@ -162,7 +162,7 @@ public class SwiftyState {
     ///   - state: the new state
     ///   - oldState: the old state
     ///   - force: should be forced or not
-    private func notify(state: SwiftyStateStoreProtocol, oldState: SwiftyStateStoreProtocol, force : Bool = false){
+    private func notify(state: SwiftyStateStore, oldState: SwiftyStateStore, force : Bool = false){
         for (_, f) in self.machineState.subscribers {
             f(state, oldState)
         }
@@ -280,11 +280,11 @@ public class SwiftyStateMachineState {
     /// the singleton instance
     static var instance = SwiftyStateMachineState()
     /// List of the subscribers that will be notified if the state changes
-    var subscribers : [String : (SwiftyStateStoreProtocol, SwiftyStateStoreProtocol?)->Void] = [String : (SwiftyStateStoreProtocol, SwiftyStateStoreProtocol?)->Void]()
+    var subscribers : [String : (SwiftyStateStore, SwiftyStateStore?)->Void] = [String : (SwiftyStateStore, SwiftyStateStore?)->Void]()
     /// counter used to create unique ID's
     var counter : Int = 0
     /// The state
-    var state : SwiftyStateStoreProtocol?
+    var state : SwiftyStateStore?
     /// Should SwiftyState collect state change history data?
     var debug = false
     /// Debugger UI
