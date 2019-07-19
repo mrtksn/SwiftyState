@@ -1,6 +1,6 @@
 # SwiftyState
 
-### v1.0
+### v1.1.0
 
 SwiftyState is a **State Engine** featuring a powerful **on-device debugger with a graphical user interface**. You can also do time travel in your app. Inspired by the Redux JS Library but not too much.
 
