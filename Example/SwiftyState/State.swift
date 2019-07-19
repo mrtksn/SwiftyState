@@ -11,10 +11,12 @@ import SwiftyState
 
 
 /// This is your store
-struct MyStore : SwiftyStateStoreProtocol {
+struct MyStore : SwiftyStateStoreEquatable {
     var switchesTurnedOn : [String] = [String]()
     var maxSwitches : Int = 1
     var bannedSwitches : [String] = [String]()
+    
+    
 }
 
  
@@ -28,7 +30,7 @@ extension SwiftyState {
 
 /// Create a validator that will acceot or reject the state.
 struct MyValidator : SwiftyStateValidiator{
-    func validiator(_ state: SwiftyStateStoreProtocol) -> Bool {
+    func validiator(_ state: SwiftyStateStore) -> Bool {
         let newState = state as! MyStore
         
         // Reject the state if max switches is negative
@@ -54,7 +56,7 @@ enum SnakeActions : SwiftyAction{
     
     case turnSwitchOn(id: String)
     case turnSwitchOff(id: String)
-    func reducer(state: SwiftyStateStoreProtocol) -> SwiftyStateStoreProtocol {
+    func reducer(state: SwiftyStateStore) -> SwiftyStateStore {
         var newState = state as! MyStore
         
         switch self {
@@ -87,7 +89,7 @@ enum ControlActions : SwiftyAction {
     case banSwitches
     case liftBan
     
-    func reducer(state: SwiftyStateStoreProtocol) -> SwiftyStateStoreProtocol {
+    func reducer(state: SwiftyStateStore) -> SwiftyStateStore {
         var newState = state as! MyStore
         
         switch self {

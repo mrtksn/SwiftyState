@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         self.sub = SwiftyState().subscribe(f: { [weak self] in
             let state = $0 as! MyStore //get the new state
             if let oldState = $1 as? MyStore {
+                oldState.maxSwitches.hasChanged()
         //get the old state and check for changes against the new state
                 if state.switchesTurnedOn.count != oldState.switchesTurnedOn.count {
                     //Update if the count of switches is different from the previous state

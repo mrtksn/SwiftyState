@@ -8,8 +8,14 @@
 import Foundation
 
 /// Conform to this to have equatable store
-protocol SwiftyStateStoreProtocol : SwiftyStateStore, Equatable{
-    
+public protocol SwiftyStateStoreEquatable : SwiftyStateStore, Equatable{
+    func hasChanged(_ property : String)->Bool
+}
+
+public extension SwiftyStateStoreEquatable {
+    public func hasChanged(_ property : String)->Bool{
+        return false
+    }
 }
 
 /// The object that holds the state, not equatable
