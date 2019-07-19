@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftyState'
-  s.version          = '1.0'
+  s.version          = '1.1'
   s.summary          = 'A State Engine with a debug UI on iOS and iPadOS'
 
 # This description is used to generate tags and improve search results.
