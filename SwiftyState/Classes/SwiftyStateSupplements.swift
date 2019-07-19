@@ -13,7 +13,7 @@ public protocol SwiftyStateStoreEquatable : SwiftyStateStore, Equatable{
 }
 
 public extension SwiftyStateStoreEquatable {
-    public func hasChanged(_ property : String)->Bool{
+    func hasChanged(_ property : String)->Bool{
         return false
     }
 }
