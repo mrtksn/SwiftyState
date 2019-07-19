@@ -12,11 +12,6 @@ public protocol SwiftyStateStoreEquatable : SwiftyStateStore, Equatable{
     func hasChanged(_ property : String)->Bool
 }
 
-public extension SwiftyStateStoreEquatable {
-    func hasChanged(_ property : String)->Bool{
-        return false
-    }
-}
 
 /// The object that holds the state, not equatable
 public protocol SwiftyStateStore :  Codable {

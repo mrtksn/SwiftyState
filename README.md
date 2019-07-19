@@ -34,8 +34,8 @@ import SwiftyState
 In SwiftyState, you need to define your state structure. You have only one of these.
 
 ```Swift
-/// This is your store. It is a struct that conforms to the SwiftyStateStoreProtocol
-struct MyStore : SwiftyStateStoreProtocol {
+/// This is your store. It is a struct that conforms to the SwiftyStateStore
+struct MyStore : SwiftyStateStoreEquatable {
     var Jenny : Int = 100
     var Donald : Int = 20
 }
@@ -69,7 +69,7 @@ Don't worry, it's autocomplete friendly. XCode(or your favorite IDE) will help y
 enum PayAction : SwiftyAction {
     case give10BuckToDonald
 
-    func reducer(state: SwiftyStateStoreProtocol) -> SwiftyStateStoreProtocol {
+    func reducer(state: SwiftyStateStore) -> SwiftyStateStore {
         var newState = state as! MyStore
         switch self {
         case .give10BuckToDonald:
@@ -95,7 +95,7 @@ enum PayAction : SwiftyAction {
     case give10BuckToDonald
     case giveToDonald(amount : Int)
 
-    func reducer(state: SwiftyStateStoreProtocol) -> SwiftyStateStoreProtocol {
+    func reducer(state: SwiftyStateStore) -> SwiftyStateStore {
         var newState = state as! MyStore
         switch self {
         case .give10BuckToDonald:
@@ -123,7 +123,7 @@ Do you see the pattern here? You can keep adding actions as you need and it does
 enum StealAction : SwiftyAction{
     case stealAll
 
-    func reducer(state: SwiftyStateStoreProtocol) -> SwiftyStateStoreProtocol {
+    func reducer(state: SwiftyStateStore) -> SwiftyStateStore {
         var newState = state as! MyStore
         newState.Donald = 0
         newState.Jenny = 0
@@ -185,7 +185,7 @@ With SwiftyState you have the option to reject action results if you are not hap
 
 ```Swift
 struct MyValidator : SwiftyStateValidiator{
-    func validiator(_ state: SwiftyStateStoreProtocol) -> Bool {
+    func validiator(_ state: SwiftyStateStore) -> Bool {
         // the new state is available here, before making it available everywhere:
         let newState = state as! MyStore
 
