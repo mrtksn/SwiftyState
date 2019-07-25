@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5968585B832D81B3C8D7496B /* Pods_SwiftyState_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A02CEB9728FB679F243FFFDB /* Pods_SwiftyState_Example.framework */; };
+		5C56957C22E99B590071A931 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C56957B22E99B590071A931 /* SecondViewController.swift */; };
 		5C989B4B22D28BCD002AA0A6 /* SwiftyState.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C989B4A22D28BCD002AA0A6 /* SwiftyState.framework */; };
 		5CD6038B22D47DCC00EA94D5 /* AutoSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6038A22D47DCC00EA94D5 /* AutoSwitch.swift */; };
 		5CD723E522D32605005DFB01 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD723E422D32605005DFB01 /* State.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		4DF05ECCE0157F7BF5D7E796 /* Pods-SwiftyState_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftyState_Tests.release.xcconfig"; path = "Target Support Files/Pods-SwiftyState_Tests/Pods-SwiftyState_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5C56957B22E99B590071A931 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		5C989B4A22D28BCD002AA0A6 /* SwiftyState.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyState.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CD6038A22D47DCC00EA94D5 /* AutoSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSwitch.swift; sourceTree = "<group>"; };
 		5CD723E422D32605005DFB01 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		607FACD21AFB9204008FA782 /* Example for SwiftyState */ = {
 			isa = PBXGroup;
 			children = (
+				5C56957B22E99B590071A931 /* SecondViewController.swift */,
 				5CD723E422D32605005DFB01 /* State.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
@@ -343,6 +346,7 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				5CD6038B22D47DCC00EA94D5 /* AutoSwitch.swift in Sources */,
+				5C56957C22E99B590071A931 /* SecondViewController.swift in Sources */,
 				5CD723E522D32605005DFB01 /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
