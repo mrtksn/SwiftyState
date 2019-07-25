@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyState
 
+/// This is a demonstration for displaying the debugger UI using an an action
 class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
