@@ -1,6 +1,6 @@
 # SwiftyState
 
-### v1.1.0
+### v1.1.1
 
 SwiftyState is a **State Engine** featuring a powerful **on-device debugger with a graphical user interface**. You can also do time travel in your app. Inspired by the Redux JS Library but not too much.
 
@@ -260,7 +260,7 @@ override func viewDidLoad() {
 }
 ```
 
-If you do not wish to use the device shaking, you can launch the debugger by calling `SwiftyState().debugUIManager().showDebugger()`
+If you do not wish to use the device shaking, you can launch the debugger by calling `SwiftyState().debugUIManager().showDebugger(self)`
 
 ## Author
 
