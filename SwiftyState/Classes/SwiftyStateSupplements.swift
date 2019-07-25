@@ -9,7 +9,7 @@ import Foundation
 
 /// Conform to this to have equatable store
 public protocol SwiftyStateStoreEquatable : SwiftyStateStore, Equatable{
-    func hasChanged(_ property : String)->Bool
+    
 }
 
 
