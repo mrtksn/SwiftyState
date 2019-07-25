@@ -11,17 +11,24 @@ import UIKit
 
 /// This UIViewController that cat init the UI
 public class SwiftyStateDebugUIManager: UIViewController {
- 
+    var containerVC : UIViewController?
     override public func viewDidLoad() {
         super.viewDidLoad()
     }
     override public func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-        SwiftyState().debugUIManager().showDebugger()
+        guard let parent = containerVC else {
+            NSLog("The contaiber VC for SwiftyState Debugger is nil, the Debugger UI cannot be loaded")
+            return
+        }
+        SwiftyState().debugUIManager().showDebugger(parent)
        
     }
+ 
     /// Display the UI when device is shaken
     @discardableResult public
     func showOnShake(_ parent: UIViewController)->SwiftyStateDebugUIManager{
+        NSLog("Init ShowOnShake", parent)
+        self.containerVC = parent
         self.view.frame = CGRect.zero
         parent.addChild(self)
         parent.view.addSubview(self.view)
@@ -30,19 +37,22 @@ public class SwiftyStateDebugUIManager: UIViewController {
     
     /// Stop listening for shaking by removing the view and freeing up resources
     func cancelShowOnShake(){
-        self.view.removeFromSuperview()
+        self.removeFromParent()
     }
     
     /// Show the debugger UI
-    public func showDebugger(){
-        let debugUIVC = SwiftyState().getDebugUI()
- 
-        let bundle = Bundle(for:SwiftyStateDebuggerViewController.self)
- 
+    public func showDebugger(_ parent: UIViewController){
+  
+        
+        let debugUIVC : UIViewController? = SwiftyState().getDebugUI() //If the showDebugger is called when the debugger is already displayed
         
         if debugUIVC == nil {
+            let bundle = Bundle(for:SwiftyStateDebuggerViewController.self)
             let debuggerUI = SwiftyStateDebuggerViewController(nibName: "SwiftyStateDebuggerViewController", bundle: bundle)
-            debuggerUI.initUI()
+            
+
+            
+            debuggerUI.initUI(parent)
             SwiftyState().setDebugUI(debuggerUI)
         }
     }
@@ -51,6 +61,16 @@ public class SwiftyStateDebugUIManager: UIViewController {
     func closeDebugger(){
         SwiftyState().getDebugUI()?.closeUI()
      //   self.machineState.debugUI = nil
+    }
+    
+    public override func viewDidDisappear(_ animated: Bool) {
+         NSLog("Debug UI Removed from main VC")
+        self.cancelShowOnShake()
+        
+    }
+    
+    deinit {
+        NSLog("DebugManager UI deinit")
     }
 }
 
@@ -95,6 +115,17 @@ public enum SwiftyDebuggerAction : SwiftyAction{
 
 /// UIViewController of the debugger UI
 public class SwiftyStateDebuggerViewController: UIViewController {
+    
+    public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        NSLog("Debugger UI Init from Xib")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        NSLog("Debugger UI Init from coder")
+    }
+    
     override public var prefersStatusBarHidden: Bool {
         return true
     }
@@ -177,16 +208,16 @@ public class SwiftyStateDebuggerViewController: UIViewController {
     
  
     /// attach the UI to the view hierarchy
-    func initUI(){
-        let root = UIApplication.shared.keyWindow!.rootViewController
-        guard let frame = root?.view.frame else {
-            return
-        }
+    ///
+    /// - Parameter containerVC: The ViewController where the UI will attach
+    func initUI(_ containerVC: UIViewController){
+        let frame = containerVC.view.frame
+
         self.view.frame = frame.offsetBy(dx: 0, dy: 150)
         self.view.alpha = 0
- 
-        root?.addChild(self)
-        root?.view.addSubview(self.view)
+        
+        containerVC.addChild(self)
+        containerVC.view.addSubview(self.view)
         
         UIView.animate(withDuration: 0.5) {[weak self] in
             self?.view.frame.origin = CGPoint.zero
@@ -377,6 +408,7 @@ public class SwiftyStateDebuggerViewController: UIViewController {
     }
     
     deinit {
+        NSLog("DebuggerUI Deinit")
         self.sub?.unsubscribe()
         /// The current state is added to the history
         let finalState = SwiftyState().getRawState()
