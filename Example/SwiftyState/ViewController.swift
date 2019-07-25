@@ -13,13 +13,13 @@ import SwiftyState
 class ViewController: UIViewController {
     @IBOutlet weak var maxSwitchCountLabel: UILabel!
     @IBOutlet weak var maxStepper: UIStepper!
-    
+    var debugger : SwiftyStateDebugUIManager?
     var sub : SwiftySubscription?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Enable SwiftyState Debuggur UI to be displayed when you shake your device. Remove this one before shipping unless you want to expose the debugger to your users
-        SwiftyState().debugUIManager().showOnShake(self)
+        self.debugger = SwiftyState().debugUIManager().showOnShake(self)
  
         /* Start a subscription to state changes */
         self.sub = SwiftyState().subscribe(f: { [weak self] in
